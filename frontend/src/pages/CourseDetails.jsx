@@ -11,17 +11,20 @@ export default function CourseDetails() {
 
   useEffect(() => {
     api.getCourse(id)
-      .then((data) => {
-        setCourse(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setError("The course could not be loaded.");
-        setLoading(false);
-      });
+      .then(setCourse)
+      .catch(console.error);
   }, [id]);
 
+  if (!course) {
+    return <p>Loading course...</p>;
+  }
+
+  return (
+    <main className="page-section container">
+      <h1>{course.title}</h1>
+      <p>{course.description}</p>
+    </main>
+  );
   if (loading) {
     return (
       <main className="page-section container">

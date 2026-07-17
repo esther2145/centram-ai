@@ -13,6 +13,7 @@ async function request(path, options = {}) {
 
 export const api = {
   getCourses: () => request("/courses"),
+  getCourse: (id) => request(`/courses/${id}`),
   getEvents: () => request("/events"),
   apply: (payload) => request("/applications", { method: "POST", body: JSON.stringify(payload) }),
   contact: (payload) => request("/contact", { method: "POST", body: JSON.stringify(payload) }),

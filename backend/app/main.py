@@ -141,3 +141,22 @@ def submit_contact(payload: schemas.ContactCreate, db: Session = Depends(get_db)
     db.commit()
     db.refresh(contact)
     return contact
+
+@app.get("/api/courses/{course_id}")
+def get_course(
+    course_id: int,
+    db: Session = Depends(get_db)
+):
+    course = (
+        db.query(models.Course)
+        .filter(models.Course.id == course_id)
+        .first()
+    )
+
+    if course is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Course not found"
+        )
+
+    return course

@@ -14,7 +14,7 @@ import CourseDetails from "./pages/CourseDetails";
 export default function App() {
   return <><Navbar /><Routes><Route path="/" element={<Home />} />
   <Route path="/courses" element={<Courses />} />
-  <Route path="/courses/:id" element={<Courses />} />
+  <Route path="/courses/:id" element={<CourseDetails />} />
 
   <Route path="/courses/application-of-ai" element={<ApplicationOfAI />}/>
   <Route path="/about" element={<About />} />
