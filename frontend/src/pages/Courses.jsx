@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../api";
 import CourseCard from "../components/CourseCard";
-import { Link } from "react-router-dom";
 export default function Courses() {
   const [courses, setCourses] = useState([]);
   const [query, setQuery] = useState("");
@@ -17,6 +16,11 @@ export default function Courses() {
       console.error("API Error:", error);
     });
 }, []);
+  
+  const filtered = courses.filter((course) =>
+    course.title.toLowerCase().includes(query.toLowerCase()) &&
+    (level === "All" || course.level === level)
+  );
 
   return (
     <main className="page-section container">

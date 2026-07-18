@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <h3>Centram AI</h3>
-          <p>Practical artificial intelligence education for students, professionals and organisations.</p>
+          <p>Practical artificial intelligence education for professionals and organisations.</p>
         </div>
         <div>
           <h4>Contact</h4>
