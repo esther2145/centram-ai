@@ -142,8 +142,8 @@ def submit_contact(payload: schemas.ContactCreate, db: Session = Depends(get_db)
     db.refresh(contact)
     return contact
 
-@app.get("/api/courses/{course_id}")
-def get_course(
+@app.get("/api/courses/{course_id}/details")
+def get_course_details(
     course_id: int,
     db: Session = Depends(get_db)
 ):
@@ -153,10 +153,37 @@ def get_course(
         .first()
     )
 
-    if course is None:
+    if not course:
         raise HTTPException(
             status_code=404,
             detail="Course not found"
         )
 
-    return course
+    modules = (
+        db.query(models.CourseModule)
+        .filter(models.CourseModule.course_id == course_id)
+        .order_by(models.CourseModule.position)
+        .all()
+    )
+
+    result_modules = []
+
+    for module in modules:
+        topics = (
+            db.query(models.ModuleTopic)
+            .filter(models.ModuleTopic.module_id == module.id)
+            .order_by(models.ModuleTopic.position)
+            .all()
+        )
+
+        result_modules.append({
+            "id": module.id,
+            "title": module.title,
+            "objective": module.objective,
+            "topics": topics
+        })
+
+    return {
+        "course": course,
+        "modules": result_modules
+    }

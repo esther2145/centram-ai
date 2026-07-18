@@ -27,10 +27,10 @@ export default function CourseCard({ course }) {
 
         <div className="course-card-links">
           <Link
-            className="text-link"
             to={`/courses/${course.id}`}
+            className="text-link"
           >
-            View course outline →
+            View full outline →
           </Link>
 
           <Link

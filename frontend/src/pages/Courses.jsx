@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../api";
 import CourseCard from "../components/CourseCard";
-
+import { Link } from "react-router-dom";
 export default function Courses() {
   const [courses, setCourses] = useState([]);
   const [query, setQuery] = useState("");
@@ -18,7 +18,6 @@ export default function Courses() {
       <div className="page-header"><span className="eyebrow">PROGRAMMES</span><h1>Find your next AI course.</h1><p>Choose a programme based on your experience, goals and preferred learning mode.</p></div>
       <div className="filters">
         <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search courses..." />
-        <select value={level} onChange={(e) => setLevel(e.target.value)}><option>All</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select>
       </div>
       <div className="card-grid">{filtered.map((course) => <CourseCard key={course.id} course={course} />)}</div>
     </main>

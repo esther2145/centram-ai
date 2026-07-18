@@ -34,6 +34,23 @@ class Course(Base):
     featured = Column(Boolean, default=False)
     is_active = Column(Boolean, default=True)
 
+class CourseModule(Base):
+    __tablename__ = "course_modules"
+
+    id = Column(Integer, primary_key=True, index=True)
+    course_id = Column(Integer, ForeignKey("courses.id"))
+    title = Column(String, nullable=False)
+    objective = Column(Text)
+    position = Column(Integer)
+
+class ModuleTopic(Base):
+    __tablename__ = "module_topics"
+
+    id = Column(Integer, primary_key=True, index=True)
+    module_id = Column(Integer, ForeignKey("course_modules.id"))
+    title = Column(String, nullable=False)
+    description = Column(Text)
+    position = Column(Integer)
 
 class Event(Base):
     __tablename__ = "events"
