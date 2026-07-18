@@ -7,11 +7,16 @@ export default function Courses() {
   const [query, setQuery] = useState("");
   const [level, setLevel] = useState("All");
 
-  useEffect(() => { api.getCourses().then(setCourses).catch(console.error); }, []);
-
-  const filtered = courses.filter((course) =>
-    course.title.toLowerCase().includes(query.toLowerCase()) && (level === "All" || course.level === level)
-  );
+  useEffect(() => {
+  api.getCourses()
+    .then((data) => {
+      console.log("Courses from API:", data);
+      setCourses(data);
+    })
+    .catch((error) => {
+      console.error("API Error:", error);
+    });
+}, []);
 
   return (
     <main className="page-section container">
