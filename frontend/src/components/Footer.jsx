@@ -9,8 +9,8 @@ export default function Footer() {
         <div>
           <h4>Contact</h4>
           <p>Kampala, Uganda</p>
-          <p>hello@centram.ai</p>
-          <p>+256 700 000 000</p>
+          <p>Lab@centram.ai</p>
+          <p>+256 772 431 290</p>
         </div>
         <div>
           <h4>Programmes</h4>
