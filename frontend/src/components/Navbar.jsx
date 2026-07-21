@@ -5,8 +5,9 @@ export default function Navbar() {
     <header className="site-header">
       <div className="container nav-wrap">
         <NavLink className="brand" to="/">
-          <span className="brand-mark">C</span>
-          <span>Centram <strong>AI</strong></span>
+          <span className="brand-logo-frame">
+            <img className="brand-logo" src="/assets/centram-logo.jpeg" alt="Centram Centre for Applied Artificial Intelligence" />
+          </span>
         </NavLink>
         <nav>
           <NavLink to="/">Home</NavLink>
