@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="container nav-wrap">
         <NavLink className="brand" to="/">
           <span className="brand-logo-frame">
-            <img className="brand-logo" src="/assets/centram-logo.jpeg" alt="Centram Centre for Applied Artificial Intelligence" />
+            <img className="brand-logo" src="/assets/centram-logo-cropped.png" alt="Centram Centre for Applied Artificial Intelligence" />
           </span>
         </NavLink>
         <nav>

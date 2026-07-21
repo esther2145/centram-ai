@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <div className="footer-logo-frame">
-            <img className="footer-logo" src="/assets/centram-logo.jpeg" alt="Centram Centre for Applied Artificial Intelligence" />
+            <img className="footer-logo" src="/assets/centram-logo-cropped.png" alt="Centram Centre for Applied Artificial Intelligence" />
           </div>
           <p>Practical artificial intelligence education for professionals and organisations.</p>
         </div>

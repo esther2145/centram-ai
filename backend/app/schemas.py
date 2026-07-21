@@ -1,5 +1,15 @@
 from datetime import date, datetime
-from pydantic import BaseModel, ConfigDict, EmailStr, Field
+from typing import Literal
+from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator
+
+
+PHONE_LENGTHS = {
+    "+256": (9, 9), "+254": (9, 9), "+255": (9, 9), "+250": (9, 9),
+    "+257": (8, 8), "+211": (9, 9), "+243": (9, 9), "+251": (9, 9),
+    "+252": (8, 9), "+260": (9, 9), "+263": (9, 9), "+265": (9, 9),
+    "+234": (10, 10), "+233": (9, 9), "+27": (9, 9), "+44": (10, 10),
+    "+1": (10, 10),
+}
 
 
 class UserCreate(BaseModel):
@@ -63,12 +73,29 @@ class EventOut(EventCreate):
 
 
 class ApplicationCreate(BaseModel):
-    full_name: str
+    full_name: str = Field(min_length=2, max_length=150)
     email: EmailStr
-    phone: str
-    education_level: str
+    phone: str = Field(pattern=r"^\+[1-9]\d{7,14}$")
+    education_level: Literal["Certificate", "Diploma", "Undergraduate", "Postgraduate"]
     course_id: int
-    motivation: str = Field(min_length=20)
+    motivation: str = Field(default="", max_length=1000)
+
+    @field_validator("phone")
+    @classmethod
+    def validate_phone_length(cls, phone: str) -> str:
+        country_code = next(
+            (code for code in sorted(PHONE_LENGTHS, key=len, reverse=True) if phone.startswith(code)),
+            None,
+        )
+        if country_code is None:
+            raise ValueError("Select a supported phone country code.")
+
+        minimum, maximum = PHONE_LENGTHS[country_code]
+        national_number = phone[len(country_code):]
+        if not minimum <= len(national_number) <= maximum:
+            expected = str(minimum) if minimum == maximum else f"{minimum} to {maximum}"
+            raise ValueError(f"Phone number for {country_code} must contain {expected} digits.")
+        return phone
 
 
 class ApplicationOut(ApplicationCreate):
