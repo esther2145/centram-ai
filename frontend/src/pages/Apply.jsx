@@ -161,7 +161,7 @@ export default function Apply() {
         </label>
 
         <label>
-          <span className="field-label">Why do you want to join this programme? <span className="optional-label">Optional</span></span>
+          <span className="field-label">What is your expectation of this programme? <span className="optional-label">Optional</span></span>
           <textarea name="motivation" maxLength="1000" value={form.motivation} onChange={update} />
         </label>
 

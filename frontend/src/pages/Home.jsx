@@ -40,7 +40,7 @@ export default function Home() {
         <div className="container">
           <div className="section-heading">
             <div><span className="eyebrow">FEATURED PROGRAMMES</span><h2>Learn skills that solve real world problems.</h2></div>
-            <Link className="text-link" to="/courses">View all courses →</Link>
+            <Link className="text-link featured-courses-link" to="/courses">View all courses →</Link>
           </div>
           <div className="card-grid">{courses.slice(0, 3).map((course) => <CourseCard key={course.id} course={course} />)}</div>
         </div>
