@@ -70,6 +70,15 @@ export default function Apply() {
         phone: `${countryCode}${phoneNumber}`,
         course_id: Number(form.course_id),
       });
+      setForm({
+        full_name: "",
+        email: "",
+        education_level: "",
+        course_id: "",
+        motivation: "",
+      });
+      setCountryCode("+256");
+      setPhoneNumber("");
       setMessage("Application submitted successfully. Our admissions team will contact you.");
     } catch (error) {
       setMessage(error.message);
