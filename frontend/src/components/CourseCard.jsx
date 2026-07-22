@@ -37,7 +37,7 @@ export default function CourseCard({ course }) {
             className="text-link"
             to={`/apply?course=${course.id}`}
           >
-            Apply for this course →
+            Apply for your desired course →
           </Link>
         </div>
       </div>
