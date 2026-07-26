@@ -80,7 +80,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.03em; }
     0 0 80px rgba(82, 32, 111, 0.35);
 }
 .floating-card { position: absolute; background: rgba(255,255,255,.94); padding: 16px 20px; border-radius: 14px; font-weight: 800; box-shadow: 0 14px 40px rgba(0,0,0,.18); }.card-one { top: 50px; left: -35px; }.card-two { right: -25px; bottom: 54px; }
-.section,.page-section { padding: 60px 0; }.page-section { min-height: 65vh; }.page-header { max-width: 780px; margin-bottom: 30px; }
+.section,.page-section { padding: 40px 0; }.page-section { min-height: 65vh; }.page-header { max-width: 780px; margin-bottom: 30px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 26px; }
 .card-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .course-card { border: 1px solid #e7eaf1; border-radius: 20px; overflow: hidden; background: white; box-shadow: 0 12px 30px rgba(24,31,61,.06); }
