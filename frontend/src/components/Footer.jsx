@@ -22,8 +22,8 @@ export default function Footer() {
         <div className="footer-column">
           <h3>Contact</h3>
           <span>Kampala, Uganda</span>
-          <a href="mailto:Lab@centram.ai">Lab@centram.ai</a>
-          <a href="tel:+256772431290">+256 772 431 290</a>
+          <a href="mailto:Lab@centramai.com">Lab@centramai.com</a>
+          <a href="tel:+256776726714">+256 776 726 714</a>
         </div>
 
         <div className="footer-action-column">
