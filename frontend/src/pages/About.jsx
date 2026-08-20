@@ -31,7 +31,7 @@ export default function About() {
     <main>
       <section className="about-hero">
         <div className="container about-hero-grid">
-          <div><span className="eyebrow">ABOUT CENTRAM AI</span><h1>Bridging the gap to the future of work.</h1></div>
+          <div><span className="eyebrow">ABOUT CENTRAM</span><h1>Bridging the gap to the future of work.</h1></div>
           <div className="about-intro">
             <p>Welcome to the Centram Centre for Applied Artificial Intelligence, a destination for domain-specific AI training, upskilling, and reskilling.</p>
             <p>Artificial intelligence is no longer a technology of the future—it is a defining tool of the present. We help public servants, private-sector professionals, and organisational leaders use it confidently and responsibly.</p>

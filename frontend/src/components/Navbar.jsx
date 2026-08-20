@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <div className="container nav-wrap">
-        <NavLink className="brand" to="/" aria-label="Centram home">
+        <NavLink className="brand" to="/" aria-label="Centram Centre for Applied Artificial Intelligence home">
           <span className="brand-logo-frame">
             <img className="brand-logo" src="/assets/centram-logo-cropped.png" alt="Centram Centre for Applied Artificial Intelligence" />
           </span>

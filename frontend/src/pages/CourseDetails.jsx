@@ -47,7 +47,7 @@ function CourseDetails() {
     <main>
       <section className="course-detail-header">
         <div className="container">
-          <span className="eyebrow">CENTRAM AI TRAINING</span>
+          <span className="eyebrow">CENTRAM PROFESSIONAL AI TRAINING</span>
 
           <h1>{course.title}</h1>
 

@@ -6,7 +6,7 @@ function ApplicationOfAI() {
       <section className="course-detail-header">
         <div className="container">
           <span className="eyebrow light">
-            CENTRAM AI PROFESSIONAL TRAINING
+            CENTRAM PROFESSIONAL AI TRAINING
           </span>
 
           <h1>Application of Artificial Intelligence</h1>

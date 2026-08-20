@@ -91,7 +91,7 @@ export default function Apply() {
     <main className="page-section container narrow">
       <div className="page-header">
         <span className="eyebrow">ADMISSIONS</span>
-        <h1>Apply to Centram AI.</h1>
+        <h1>Apply to Centram.</h1>
         <p>Complete the required information below and our admissions team will contact you.</p>
       </div>
 

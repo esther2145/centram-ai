@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ApplicationOfAI from "./pages/ApplicationOfAI";
 import CourseDetails from "./pages/CourseDetails";
+import Seo from "./components/Seo";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -22,7 +23,7 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  return <><ScrollToTop /><Navbar /><Routes><Route path="/" element={<Home />} />
+  return <><ScrollToTop /><Seo /><Navbar /><Routes><Route path="/" element={<Home />} />
   <Route path="/courses" element={<Courses />} />
   <Route path="/courses/:id" element={<CourseDetails />} />
 

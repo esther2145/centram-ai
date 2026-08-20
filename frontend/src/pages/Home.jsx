@@ -16,11 +16,11 @@ export default function Home() {
         <div className="container hero-grid">
           <div>
             <span className="eyebrow">LEARN • BUILD • INNOVATE</span>
-            <h1>Domain Specific artificial intelligence application for professionals</h1>
-            <p>Centram AI equips professionals and organisations with industry-relevant artificial intelligence, machine learning and data skills.</p>
+            <h1>Centram Centre for Applied Artificial Intelligence</h1>
+            <p>Practical, domain-specific artificial intelligence training for professionals. Centram equips people and organisations with industry-relevant AI, machine learning and data skills.</p>
             <div className="hero-actions">
               <Link className="button primary" to="/courses">Explore Courses</Link>
-              <Link className="button secondary" to="/about">Discover Centram AI</Link>
+              <Link className="button secondary" to="/about">Discover Centram</Link>
             </div>
             <div className="stats">
               <div><strong>20+</strong><span>Expert-led modules</span></div>

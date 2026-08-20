@@ -34,8 +34,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} Centram AI. All rights reserved.</span>
-        <span>Centre for Applied Artificial Intelligence</span>
+        <span>© {new Date().getFullYear()} Centram Centre for Applied Artificial Intelligence. All rights reserved.</span>
       </div>
     </footer>
   );
