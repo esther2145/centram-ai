@@ -13,8 +13,20 @@ export default function Home() {
   return (
     <>
       <section className="hero">
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          tabIndex="-1"
+        >
+          <source src="/assets/video1.mp4" type="video/mp4" />
+        </video>
         <div className="container hero-grid">
-          <div>
+          <div className="hero-content">
             <span className="eyebrow">LEARN • BUILD • INNOVATE</span>
             <h1>Centram Centre for Applied Artificial Intelligence</h1>
             <p>Practical, domain-specific artificial intelligence training for professionals. Centram equips people and organisations with industry-relevant AI, machine learning and data skills.</p>
@@ -27,11 +39,6 @@ export default function Home() {
               <div><strong>500+</strong><span>Learners targeted</span></div>
               <div><strong>3</strong><span>Learning modes</span></div>
             </div>
-          </div>
-          <div className="hero-panel">
-            <div className="floating-card card-one">Machine Learning</div>
-            <div className="floating-card card-two">Generative AI</div>
-            <div className="ai-orb">AI</div>
           </div>
         </div>
       </section>
