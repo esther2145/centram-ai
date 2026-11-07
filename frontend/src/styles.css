@@ -57,7 +57,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.03em; }
   background: linear-gradient(135deg, var(--orange), var(--orange-dark));
   color: white;
 }
-.secondary { background: var(--purple-soft); border: 1px solid #dfe3ed; }
+.secondary { background: var(--orange); border: 1px solid #dfe3ed; }
 .stats { display: flex; gap: 34px; margin-top: 34px; }
 .stats div { display: flex; flex-direction: column; }
 .stats strong { font-size: 1.35rem; }.stats span { color: #778099; font-size: .84rem; }

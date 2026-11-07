@@ -23,7 +23,7 @@ export default function Home() {
           aria-hidden="true"
           tabIndex="-1"
         >
-          <source src="/assets/video1.mp4" type="video/mp4" />
+          <source src="/assets/video2.mp4" type="video/mp4" />
         </video>
         <div className="container hero-grid">
           <div className="hero-content">
