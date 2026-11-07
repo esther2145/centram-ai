@@ -30,6 +30,18 @@ export default function About() {
   return (
     <main>
       <section className="about-hero">
+        <video
+          className="about-hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          tabIndex="-1"
+        >
+          <source src="/assets/video3.mp4" type="video/mp4" />
+        </video>
         <div className="container about-hero-grid">
           <div><span className="eyebrow">ABOUT CENTRAM</span><h1>Bridging the gap to the future of work.</h1></div>
           <div className="about-intro">
