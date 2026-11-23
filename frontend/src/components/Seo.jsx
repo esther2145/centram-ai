@@ -27,6 +27,10 @@ const pages = {
     title: `Contact | ${SITE_NAME}`,
     description: "Contact Centram Centre for Applied Artificial Intelligence in Kampala for course guidance, partnerships and corporate AI training.",
   },
+  "/evaluation": {
+    title: `Session Evaluation | ${SITE_NAME}`,
+    description: "Share feedback on your Centram session, learning experience and overall satisfaction.",
+  },
 };
 
 function setMeta(selector, value) {

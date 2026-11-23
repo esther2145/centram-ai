@@ -115,19 +115,35 @@ h2 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.03em; }
   color: white;
 }
 .evaluation-section { background: #fbf8fc; }
-.evaluation-layout { display: grid; grid-template-columns: minmax(240px,.72fr) minmax(0,1.28fr); gap: 56px; align-items: start; }
-.evaluation-intro { position: sticky; top: 120px; padding-top: 20px; }
-.evaluation-intro h2 { font-size: clamp(2rem, 4vw, 3rem); }
-.evaluation-intro>p { color: #687189; }
-.evaluation-note { display: flex; gap: 12px; align-items: flex-start; margin-top: 26px; padding: 16px; border-radius: 14px; color: var(--purple); background: var(--purple-soft); }
-.evaluation-note>span { font-size: 1.2rem; font-weight: 800; }
-.evaluation-note p { margin: 0; font-size: .9rem; }
+.evaluation-share-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(420px,1.1fr); gap: 48px; align-items: center; }
+.evaluation-share-copy h2 { font-size: clamp(2rem, 4vw, 3rem); }
+.evaluation-share-copy>p { color: #687189; }
+.evaluation-open-button { margin-top: 16px; }
+.evaluation-qr-card { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 24px; align-items: center; padding: 24px; border: 1px solid #eee5f1; border-radius: 20px; background: white; box-shadow: 0 14px 34px rgba(35,44,78,.07); }
+.evaluation-qr-code { display: grid; place-items: center; padding: 12px; border: 1px solid #eee8f0; border-radius: 14px; background: white; }
+.evaluation-qr-code canvas { display: block; width: min(220px, 100%); height: auto; }
+.evaluation-qr-details h3 { margin: 0 0 8px; font-size: 1.3rem; }
+.evaluation-qr-details>p { margin: 0 0 16px; color: #687189; font-size: .9rem; }
+.evaluation-url-label { display: block; margin-bottom: 6px; font-size: .8rem; font-weight: 750; }
+.evaluation-qr-details .evaluation-share-url { padding: 9px 10px; font-size: .78rem; }
+.evaluation-qr-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.evaluation-qr-actions .button { padding: 10px 12px; font-size: .85rem; }
+.evaluation-copy-button { border: 1px solid #e3d9e8; color: var(--purple); background: white; }
+.evaluation-qr-details .evaluation-qr-status { margin: 10px 0 0; color: var(--purple); font-size: .8rem; }
+.evaluation-page-header { padding: 48px 0 32px; background: #fbf8fc; }
+.evaluation-page-header .container { max-width: 860px; }
+.evaluation-back-link { display: inline-block; margin-bottom: 28px; color: var(--purple); font-weight: 750; }
+.evaluation-page-header h1 { max-width: 760px; margin-bottom: 16px; font-size: clamp(2.4rem, 5vw, 3.8rem); }
+.evaluation-page-header p { margin-bottom: 0; color: #5c6680; }
+.evaluation-page-form { padding: 24px 0 72px; background: #fbf8fc; }
+.evaluation-form-container { max-width: 860px; }
+.evaluation-time-note { margin: 0 0 14px; color: #687189; font-size: .9rem; }
 .evaluation-form { gap: 24px; padding: 32px; border-color: #eee5f1; }
 .evaluation-form-heading { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
-.evaluation-form-heading h3 { margin: 0; }
+.evaluation-form-heading h2 { margin: 0; font-size: 1.35rem; letter-spacing: 0; }
 .evaluation-form-heading .required-note { white-space: nowrap; }
 .evaluation-group { display: grid; gap: 20px; padding-top: 24px; border-top: 1px solid #eee8f0; }
-.evaluation-group h4 { margin: 0; color: var(--purple); font-size: 1rem; }
+.evaluation-group h3 { margin: 0; color: var(--purple); font-size: 1rem; }
 .evaluation-rating { min-width: 0; margin: 0; padding: 0; border: 0; }
 .evaluation-rating legend { margin-bottom: 12px; font-weight: 700; }
 .rating-options { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 8px; }
@@ -201,8 +217,8 @@ input,select,textarea { width: 100%; border: 1px solid #d9deea; border-radius: 1
 .footer-action-column p { margin: 0; font-size: .86rem; line-height: 1.5; }
 .footer-button { display: inline-flex; align-items: center; gap: 8px; margin-top: 5px; padding: 9px 13px; border-radius: 9px; color: white; background: var(--orange); font-size: .84rem; font-weight: 800; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 15px; padding-bottom: 15px; border-top: 1px solid rgba(255,255,255,.11); color: rgba(255,255,255,.55); font-size: .77rem; }
-@media (max-width: 820px) { nav { display: none; }.hero-grid,.split-layout,.contact-grid,.evaluation-layout { grid-template-columns: 1fr; }.evaluation-intro { position: static; padding-top: 0; }.hero-panel { min-height: 340px; }.card-grid,.feature-grid { grid-template-columns: 1fr; }.section-heading,.callout-inner { align-items: start; flex-direction: column; }.stats { gap: 16px; flex-wrap: wrap; }.form-grid { grid-template-columns: 1fr; }.footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }.footer-brand-column,.footer-action-column { grid-column: 1 / -1; }.footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }.card-one { left: 10px; }.card-two { right: 10px; }.brand { flex-basis: 210px; }.brand-logo-frame { width: 210px; } }
-@media (max-width: 520px) { .evaluation-form { padding: 22px 18px; }.rating-options { gap: 4px; }.rating-option { padding: 8px 2px; }.rating-description { font-size: .62rem; }.recommendation-options { gap: 3px; }.recommendation-option { min-height: 36px; font-size: .8rem; } }
+@media (max-width: 820px) { nav { display: none; }.hero-grid,.split-layout,.contact-grid,.evaluation-share-layout { grid-template-columns: 1fr; }.evaluation-qr-card { grid-template-columns: auto minmax(0,1fr); }.hero-panel { min-height: 340px; }.card-grid,.feature-grid { grid-template-columns: 1fr; }.section-heading,.callout-inner { align-items: start; flex-direction: column; }.stats { gap: 16px; flex-wrap: wrap; }.form-grid { grid-template-columns: 1fr; }.footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }.footer-brand-column,.footer-action-column { grid-column: 1 / -1; }.footer-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }.card-one { left: 10px; }.card-two { right: 10px; }.brand { flex-basis: 210px; }.brand-logo-frame { width: 210px; } }
+@media (max-width: 560px) { .evaluation-qr-card { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 20px 16px; }.evaluation-qr-details { width: 100%; }.evaluation-qr-actions { justify-content: center; }.evaluation-form { padding: 22px 18px; }.rating-options { gap: 4px; }.rating-option { padding: 8px 2px; }.rating-description { font-size: .62rem; }.recommendation-options { gap: 3px; }.recommendation-option { min-height: 36px; font-size: .8rem; } }
 
 .course-detail-header {
   padding: 68px 0 56px;

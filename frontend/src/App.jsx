@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ApplicationOfAI from "./pages/ApplicationOfAI";
 import CourseDetails from "./pages/CourseDetails";
+import Evaluation from "./pages/Evaluation";
 import Seo from "./components/Seo";
 
 function ScrollToTop() {
@@ -31,6 +32,7 @@ export default function App() {
   <Route path="/about" element={<About />} />
 
   <Route path="/apply" element={<Apply />} />
+  <Route path="/evaluation" element={<Evaluation />} />
   <Route path="/contact" element={<Contact />} />
   <Route path="*" element={<NotFound />} />
   </Routes><Footer /></>;
