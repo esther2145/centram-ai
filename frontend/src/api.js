@@ -36,6 +36,7 @@ export const api = {
   getCourseDetails: (id) => request(`/courses/${id}/details`),
   apply: (payload) => request("/applications", { method: "POST", body: JSON.stringify(payload) }),
   contact: (payload) => request("/contact", { method: "POST", body: JSON.stringify(payload) }),
+  submitEvaluation: (payload) => request("/evaluations", { method: "POST", body: JSON.stringify(payload) }),
   register: (payload) => request("/auth/register", { method: "POST", body: JSON.stringify(payload) }),
   login: (payload) => request("/auth/login", { method: "POST", body: JSON.stringify(payload) }),
 };

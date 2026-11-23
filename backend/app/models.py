@@ -89,3 +89,23 @@ class ContactMessage(Base):
     subject = Column(String(200), nullable=False)
     message = Column(Text, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class Evaluation(Base):
+    __tablename__ = "evaluations"
+
+    id = Column(Integer, primary_key=True, index=True)
+    session_name = Column(String(180), nullable=False)
+    name = Column(String(150), nullable=True)
+    email = Column(String(254), nullable=True)
+    objectives_clarity = Column(Integer, nullable=False)
+    content_relevance = Column(Integer, nullable=False)
+    session_pace = Column(Integer, nullable=False)
+    facilitator_engagement = Column(Integer, nullable=False)
+    registration_experience = Column(Integer, nullable=False)
+    learning_environment = Column(Integer, nullable=False)
+    learning_resources = Column(Integer, nullable=False)
+    overall_satisfaction = Column(Integer, nullable=False)
+    recommendation_score = Column(Integer, nullable=False)
+    comments = Column(Text, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())

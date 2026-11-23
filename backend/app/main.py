@@ -142,6 +142,16 @@ def submit_contact(payload: schemas.ContactCreate, db: Session = Depends(get_db)
     db.refresh(contact)
     return contact
 
+
+@app.post("/api/evaluations", response_model=schemas.EvaluationOut, status_code=201)
+def submit_evaluation(payload: schemas.EvaluationCreate, db: Session = Depends(get_db)):
+    evaluation = models.Evaluation(**payload.model_dump())
+    db.add(evaluation)
+    db.commit()
+    db.refresh(evaluation)
+    return evaluation
+
+
 @app.get("/api/courses/{course_id}/details")
 def get_course_details(
     course_id: int,

@@ -116,3 +116,25 @@ class ContactOut(ContactCreate):
     model_config = ConfigDict(from_attributes=True)
     id: int
     created_at: datetime
+
+
+class EvaluationCreate(BaseModel):
+    session_name: str = Field(min_length=2, max_length=180)
+    name: str | None = Field(default=None, max_length=150)
+    email: EmailStr | None = None
+    objectives_clarity: int = Field(ge=1, le=5)
+    content_relevance: int = Field(ge=1, le=5)
+    session_pace: int = Field(ge=1, le=5)
+    facilitator_engagement: int = Field(ge=1, le=5)
+    registration_experience: int = Field(ge=1, le=5)
+    learning_environment: int = Field(ge=1, le=5)
+    learning_resources: int = Field(ge=1, le=5)
+    overall_satisfaction: int = Field(ge=1, le=5)
+    recommendation_score: int = Field(ge=0, le=10)
+    comments: str | None = Field(default=None, max_length=2000)
+
+
+class EvaluationOut(EvaluationCreate):
+    model_config = ConfigDict(from_attributes=True)
+    id: int
+    created_at: datetime
